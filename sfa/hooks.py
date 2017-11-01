@@ -79,13 +79,18 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Address": {
+		"on_update": "sfa.custom_function.set_default_address",
+#		"on_cancel": "method",
+#		"on_trash": "method"
+	},
+	"Contact": {
+		"on_update": "sfa.custom_function.set_default_contact",
+#		"on_cancel": "method",
+#		"on_trash": "method"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
